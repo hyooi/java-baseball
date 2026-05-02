@@ -17,10 +17,10 @@
 
 4. 당첨 번호 입력
 - [ ] 당첨 번호 6개를 쉼표(,)로 구분하여 입력받는다. (InputView)
-- [ ] 1~45 범위를 벗어나면 IllegalArgumentException 발생
-- [ ] 중복된 번호가 있으면 IllegalArgumentException 발생
+- [X] 1~45 범위를 벗어나면 IllegalArgumentException 발생
+- [X] 중복된 번호가 있으면 IllegalArgumentException 발생
 - [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
-- [ ] 6개가 아니면 IllegalArgumentException 발생
+- [X] 6개가 아니면 IllegalArgumentException 발생
 - [ ] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
 
 5. 보너스 번호 입력
