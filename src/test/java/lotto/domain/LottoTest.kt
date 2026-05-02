@@ -1,5 +1,6 @@
 package lotto.domain
 
+import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.Test
 
@@ -27,5 +28,12 @@ class LottoTest {
     fun `로또 번호가 범위를 벗어나면 예외 발생`() {
         assertThatThrownBy { Lotto(listOf(0, 1, 2, 3, 4, 5)) }
             .isInstanceOf(IllegalArgumentException::class.java)
+    }
+
+    @Test
+    fun countMatch() {
+        val result = Lotto(listOf(1, 2, 3, 4, 5, 6))
+            .countMatch(listOf(1, 2, 3, 10, 12, 30))
+        assertThat(result).isEqualTo(3)
     }
 }

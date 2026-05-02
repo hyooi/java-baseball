@@ -13,6 +13,6 @@ fun main() {
     OutputView.printPurchaseResult(result)
 
     val winningNumber = OutputView.retryOnError { InputView.readWinningNumber() }
-    val statistics = service.statistics(result, winningNumber)
+    val statistics = service.result(result, winningNumber)
     OutputView.printStatistics(statistics)
 }

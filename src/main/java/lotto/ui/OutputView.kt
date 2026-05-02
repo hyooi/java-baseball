@@ -1,6 +1,7 @@
 package lotto.ui
 
 import lotto.domain.Lotto
+import lotto.domain.Rank
 
 object OutputView {
     fun printError(message: String) {
@@ -22,5 +23,6 @@ object OutputView {
         lottos.forEach { println(it) }
     }
 
-    fun printStatistics(statistics: Any) {}
+    fun printStatistics(statistics:  Map<Rank, Int>) {
+    }
 }

@@ -2,6 +2,7 @@ package lotto.service
 
 import lotto.domain.Amount
 import lotto.domain.Lotto
+import lotto.domain.Rank
 import lotto.domain.WinningNumber
 
 class LottoService {
@@ -13,7 +14,12 @@ class LottoService {
             )
         }
 
-    fun statistics(lottos: List<Lotto>, winningNumber: WinningNumber) {
+    fun result(lottos: List<Lotto>, winningNumber: WinningNumber): Map<Rank, Int> {
+        val counts = lottos
+            .map { winningNumber.match(it) }
+            .groupingBy { it }
+            .eachCount()
 
+        return Rank.entries.associateWith { counts.getOrDefault(it, 0) }
     }
 }

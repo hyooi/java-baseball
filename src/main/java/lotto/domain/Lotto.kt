@@ -27,6 +27,8 @@ class Lotto(numbers: List<Int>) {
         }
     }
 
+    fun countMatch(winningNumbers: List<Int>): Int =
+        numbers.count { it in winningNumbers }
     fun contains(number: Int): Boolean = number in numbers
 
     override fun toString(): String = numbers.toString()

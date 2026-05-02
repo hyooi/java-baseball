@@ -1,13 +1,13 @@
 package lotto.domain
 
-class WinningNumber(lotto: Lotto, bonus: Int) {
-    val lotto: Lotto
+class WinningNumber(winningLotto: Lotto, bonus: Int) {
+    val winningLotto: Lotto
     val bonus: Int
 
     init {
-        validate(lotto, bonus)
+        validate(winningLotto, bonus)
 
-        this.lotto = lotto
+        this.winningLotto = winningLotto
         this.bonus = bonus
     }
 
@@ -18,6 +18,13 @@ class WinningNumber(lotto: Lotto, bonus: Int) {
         require(!lotto.contains(bonusNumber)) {
             "Bonus numbers cannot be duplicated with winning numbers."
         }
+    }
+
+    fun match(lotto: Lotto): Rank {
+        val matchCount = lotto.countMatch(winningLotto.numbers)
+        val bonusMatch = lotto.contains(bonus)
+
+        return Rank.of(matchCount, bonusMatch)
     }
 
 }
