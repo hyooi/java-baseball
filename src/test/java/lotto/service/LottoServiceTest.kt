@@ -36,6 +36,5 @@ class LottoServiceTest {
         assertThat(result[Rank.THIRD]).isEqualTo(1)
         assertThat(result[Rank.FOURTH]).isEqualTo(0)
         assertThat(result[Rank.FIFTH]).isEqualTo(0)
-        assertThat(result[Rank.MISS]).isEqualTo(1)
     }
 }

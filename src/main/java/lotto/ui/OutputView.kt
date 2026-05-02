@@ -24,5 +24,10 @@ object OutputView {
     }
 
     fun printStatistics(statistics:  Map<Rank, Int>) {
+        println("[SYSTEM] Winning Statistics")
+        println("[SYSTEM] ---")
+        statistics.forEach { (rank, value) ->
+            println("[SYSTEM] ${rank.matchCount} matches (${rank.prize}) won - ${value} piece")
+        }
     }
 }

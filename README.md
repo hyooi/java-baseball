@@ -16,29 +16,29 @@
 - [X] 각 로또 번호를 [n, n, n, n, n, n] 형식으로 출력한다.
 
 4. 당첨 번호 입력
-- [ ] 당첨 번호 6개를 쉼표(,)로 구분하여 입력받는다. (InputView)
+- [X] 당첨 번호 6개를 쉼표(,)로 구분하여 입력받는다. (InputView)
 - [X] 1~45 범위를 벗어나면 IllegalArgumentException 발생
 - [X] 중복된 번호가 있으면 IllegalArgumentException 발생
-- [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
+- [X] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
 - [X] 6개가 아니면 IllegalArgumentException 발생
-- [ ] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
+- [X] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
 
 5. 보너스 번호 입력
-- [ ] 보너스 번호 1개를 입력받는다. (InputView)
+- [X] 보너스 번호 1개를 입력받는다. (InputView)
 - [X] 1~45 범위를 벗어나면 IllegalArgumentException 발생
 - [X] 당첨 번호와 중복되면 IllegalArgumentException 발생
-- [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
-- [ ] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
+- [X] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
+- [X] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
 
 6. 당첨 결과 계산
-- [ ] 1등: 6개 번호 일치 / 2,000,000,000원
-- [ ] 2등: 5개 번호 + 보너스 번호 일치 / 30,000,000원
-- [ ] 3등: 5개 번호 일치 / 1,500,000원
-- [ ] 4등: 4개 번호 일치 / 50,000원
-- [ ] 5등: 3개 번호 일치 / 5,000원
+- [X] 1등: 6개 번호 일치 / 2,000,000,000원
+- [X] 2등: 5개 번호 + 보너스 번호 일치 / 30,000,000원
+- [X] 3등: 5개 번호 일치 / 1,500,000원
+- [X] 4등: 4개 번호 일치 / 50,000원
+- [X] 5등: 3개 번호 일치 / 5,000원
 
 7. 당첨 내역 출력
-- [ ] 등수별 일치한 갯수를 출력한다. (OutputView)
+- [X] 등수별 일치한 갯수를 출력한다. (OutputView)
 - [ ] 총 수익률을 소수점 둘째 자리에서 반올림하여 출력한다. (OutputView)
   - 총 당첨 금액 / 구입 금액 × 100
 

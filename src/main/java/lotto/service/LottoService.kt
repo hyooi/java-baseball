@@ -20,6 +20,8 @@ class LottoService {
             .groupingBy { it }
             .eachCount()
 
-        return Rank.entries.associateWith { counts.getOrDefault(it, 0) }
+        return Rank.entries
+            .filter { it != Rank.MISS }
+            .associateWith { counts.getOrDefault(it, 0) }
     }
 }
