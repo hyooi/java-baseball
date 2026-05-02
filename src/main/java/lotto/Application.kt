@@ -15,4 +15,5 @@ fun main() {
     val winningNumber = OutputView.retryOnError { InputView.readWinningNumber() }
     val statistics = service.result(result, winningNumber)
     OutputView.printStatistics(statistics)
+    OutputView.printRevenue(service.revenue(amount, statistics))
 }

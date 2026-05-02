@@ -30,4 +30,8 @@ object OutputView {
             println("[SYSTEM] ${rank.matchCount} matches (${rank.prize}) won - ${value} piece")
         }
     }
+
+    fun printRevenue(revenue: Double) {
+        println("[SYSTEM] The total revenue is ${"%.1f".format(revenue)}%.")
+    }
 }
