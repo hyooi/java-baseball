@@ -1,5 +1,7 @@
 package lotto.ui
 
+import lotto.domain.Lotto
+
 object OutputView {
     fun printError(message: String) {
         println(message)
@@ -14,4 +16,11 @@ object OutputView {
             }
         }
     }
+
+    fun printPurchaseResult(lottos: List<Lotto>) {
+        println("[SYSTEM] ${lottos.size} purchased.")
+        lottos.forEach { println(it) }
+    }
+
+    fun printStatistics(statistics: Any) {}
 }

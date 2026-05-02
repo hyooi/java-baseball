@@ -1,14 +1,14 @@
 package lotto.domain
 
-class WinningLotto(lotto: Lotto, bonusNumber: Int) {
+class WinningNumber(lotto: Lotto, bonus: Int) {
     val lotto: Lotto
-    val bonusNumber: Int
+    val bonus: Int
 
     init {
-        validate(lotto, bonusNumber)
+        validate(lotto, bonus)
 
         this.lotto = lotto
-        this.bonusNumber = bonusNumber
+        this.bonus = bonus
     }
 
     private fun validate(lotto: Lotto, bonusNumber: Int) {

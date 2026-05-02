@@ -29,4 +29,5 @@ class Lotto(numbers: List<Int>) {
 
     fun contains(number: Int): Boolean = number in numbers
 
+    override fun toString(): String = numbers.toString()
 }
