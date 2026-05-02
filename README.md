@@ -2,10 +2,10 @@
 
 ## 기능 목록
 1. 로또 구입 금액 입력
-- [ ] 구입 금액을 입력받는다 (InputView)
-- [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
-- [ ] 0 이하의 금액 입력 시 IllegalArgumentException 발생
-- [ ] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
+- [X] 구입 금액을 입력받는다 (InputView)
+- [X] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
+- [X] 0 이하의 금액 입력 시 IllegalArgumentException 발생
+- [X] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
 
 2. 로또 발행
 - [ ] 구입 금액 / 1,000 만큼 로또를 자동 발행한다.
@@ -25,8 +25,8 @@
 
 5. 보너스 번호 입력
 - [ ] 보너스 번호 1개를 입력받는다. (InputView)
-- [ ] 1~45 범위를 벗어나면 IllegalArgumentException 발생
-- [ ] 당첨 번호와 중복되면 IllegalArgumentException 발생
+- [X] 1~45 범위를 벗어나면 IllegalArgumentException 발생
+- [X] 당첨 번호와 중복되면 IllegalArgumentException 발생
 - [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException 발생
 - [ ] 오류 발생 시 [ERROR]로 시작하는 메시지 출력 후 재입력
 
