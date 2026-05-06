@@ -12,6 +12,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:2.1.20")
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
     testImplementation("org.assertj:assertj-core:3.27.3")
+    testImplementation("io.kotest:kotest-assertions-core:6.0.7")
 }
 
 buildscript {

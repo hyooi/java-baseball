@@ -2,12 +2,14 @@ package lotto.domain
 
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 
 class AmountTest {
-    @Test
-    fun `정상 케이스`() {
-        Amount(1000)
-        Amount(2500)
+    @ValueSource(ints = [1000, 25000])
+    @ParameterizedTest
+    fun `정상 케이스` (value: Int){
+        Amount(value)
     }
 
     @Test
