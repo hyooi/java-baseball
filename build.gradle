@@ -1,14 +1,29 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'kotlin'
 
 version = '1.0.0'
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile('org.junit.jupiter:junit-jupiter:5.5.2')
-    testCompile('org.assertj:assertj-core:3.14.0')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.1.20")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testImplementation("org.assertj:assertj-core:3.27.3")
+    testImplementation("io.kotest:kotest-assertions-core:6.0.7")
+}
+
+buildscript {
+    ext.kotlin_version = '2.2.20'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+kotlin {
+    jvmToolchain(21)
 }
