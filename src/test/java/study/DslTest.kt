@@ -1,5 +1,7 @@
 package study
 
+import io.kotest.matchers.collections.shouldContainAll
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 import org.junit.Test
 
@@ -39,16 +41,19 @@ class DslTest {
 
         actual.name shouldBe "강효인"
         actual.company shouldBe "현대자동차그룹"
-        actual.skill[0].type shouldBe SkillType.SOFT
-        actual.skill[0].description shouldBe "A passion for problem solving"
-        actual.skill[1].type shouldBe SkillType.SOFT
-        actual.skill[1].description shouldBe "Good communication skills"
-        actual.skill[2].type shouldBe SkillType.HARD
-        actual.skill[2].description shouldBe "Kotlin"
-        actual.languages[0].language shouldBe "Korean"
-        actual.languages[0].level shouldBe 5
-        actual.languages[1].language shouldBe "English"
-        actual.languages[1].level shouldBe 3
+
+        actual.skill shouldHaveSize 3
+        actual.skill shouldContainAll listOf(
+            Skill(SkillType.SOFT, "A passion for problem solving"),
+            Skill(SkillType.SOFT, "Good communication skills"),
+            Skill(SkillType.HARD, "Kotlin")
+        )
+
+        actual.languages shouldHaveSize 2
+        actual.languages shouldContainAll listOf(
+            Language("Korean", 5),
+            Language("English", 3)
+        )
     }
 
     private fun introduce(block: PersonBuilder.() -> Unit): Person {
